@@ -1,0 +1,107 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Gapminder 2007\"\n",
+        "format: dashboard\n",
+        "---"
+      ],
+      "id": "fdb18da9"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as px \n",
+        "import plotly.express as px"
+      ],
+      "id": "01016291",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import plotly.express as px\n",
+        "p = px.line(y=[1, 2, 3])\n",
+        "p"
+      ],
+      "id": "9b35de3a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# page 1\n",
+        "\n",
+        "## Row {height=\"30\"}\n",
+        "\n",
+        "### column\n"
+      ],
+      "id": "88871edc"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "p"
+      ],
+      "id": "31684602",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### column\n",
+        "\n",
+        "## Row {height=\"70\"}\n"
+      ],
+      "id": "e940633c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "p"
+      ],
+      "id": "1c24fc92",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Page 2\n"
+      ],
+      "id": "2c08b019"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "p"
+      ],
+      "id": "35aad86c",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
