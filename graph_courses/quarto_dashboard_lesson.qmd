@@ -14,24 +14,25 @@ p = px.line(y=[1, 2, 3])
 p
 ```
 
-# page 1
+# Layout
 
 ## Row {height="30"}
 
-### column
+### column {width="20"}
 
 ```{python}
 p
 ```
 
-### column
+### column {width="80"}
 
 ## Row {height="70"}
 
 ```{python}
 p
 ```
-# Page 2
+
+# Tabsets
 
 ```{python}
 p

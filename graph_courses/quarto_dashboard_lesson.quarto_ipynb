@@ -9,7 +9,7 @@
         "format: dashboard\n",
         "---"
       ],
-      "id": "fdb18da9"
+      "id": "26b65120"
     },
     {
       "cell_type": "code",
@@ -18,7 +18,7 @@
         "import pandas as px \n",
         "import plotly.express as px"
       ],
-      "id": "01016291",
+      "id": "9fbfe769",
       "execution_count": null,
       "outputs": []
     },
@@ -30,7 +30,7 @@
         "p = px.line(y=[1, 2, 3])\n",
         "p"
       ],
-      "id": "9b35de3a",
+      "id": "a69e0464",
       "execution_count": null,
       "outputs": []
     },
@@ -38,13 +38,13 @@
       "cell_type": "markdown",
       "metadata": {},
       "source": [
-        "# page 1\n",
+        "# Layout\n",
         "\n",
         "## Row {height=\"30\"}\n",
         "\n",
-        "### column\n"
+        "### column {width=\"20\"}\n"
       ],
-      "id": "88871edc"
+      "id": "e763b2a4"
     },
     {
       "cell_type": "code",
@@ -52,7 +52,7 @@
       "source": [
         "p"
       ],
-      "id": "31684602",
+      "id": "47305aff",
       "execution_count": null,
       "outputs": []
     },
@@ -60,11 +60,11 @@
       "cell_type": "markdown",
       "metadata": {},
       "source": [
-        "### column\n",
+        "### column {width=\"80\"}\n",
         "\n",
         "## Row {height=\"70\"}\n"
       ],
-      "id": "e940633c"
+      "id": "3278de2a"
     },
     {
       "cell_type": "code",
@@ -72,7 +72,7 @@
       "source": [
         "p"
       ],
-      "id": "1c24fc92",
+      "id": "b9b35945",
       "execution_count": null,
       "outputs": []
     },
@@ -80,9 +80,9 @@
       "cell_type": "markdown",
       "metadata": {},
       "source": [
-        "# Page 2\n"
+        "# Tabsets\n"
       ],
-      "id": "2c08b019"
+      "id": "f91432d4"
     },
     {
       "cell_type": "code",
@@ -90,16 +90,17 @@
       "source": [
         "p"
       ],
-      "id": "35aad86c",
+      "id": "547a5e7d",
       "execution_count": null,
       "outputs": []
     }
   ],
   "metadata": {
     "kernelspec": {
-      "display_name": "Python 3",
+      "name": "python3",
       "language": "python",
-      "name": "python3"
+      "display_name": "Python 3 (ipykernel)",
+      "path": "c:\\Users\\lenovo\\Documents\\GitHub\\co2_emissions_demo\\.venv\\share\\jupyter\\kernels\\python3"
     }
   },
   "nbformat": 4,

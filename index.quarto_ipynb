@@ -40,7 +40,7 @@
         "\n",
         "Run the following code to import the necessary libraries:\n"
       ],
-      "id": "3942cdca"
+      "id": "4f6de058"
     },
     {
       "cell_type": "code",
@@ -52,7 +52,7 @@
         "from itables import show\n",
         "import country_converter as coco"
       ],
-      "id": "b8281754",
+      "id": "a7daa7eb",
       "execution_count": null,
       "outputs": []
     },
@@ -62,7 +62,7 @@
       "source": [
         "Load in your dataset from gapminder below. View it in your data viewer to get an idea of the structure.\n"
       ],
-      "id": "3522abfe"
+      "id": "06037903"
     },
     {
       "cell_type": "code",
@@ -72,7 +72,7 @@
         "emissions = pd.read_csv(\"co2_cons.csv\")\n",
         "emissions"
       ],
-      "id": "c4938b73",
+      "id": "ce7de43d",
       "execution_count": null,
       "outputs": []
     },
@@ -86,7 +86,7 @@
         "\n",
         "First, let's see the issue:\n"
       ],
-      "id": "814e5cd4"
+      "id": "3559cbfe"
     },
     {
       "cell_type": "code",
@@ -94,7 +94,7 @@
       "source": [
         "emissions.query(\"country == 'China'\")[[\"country\",  \"2020\", \"2021\", \"2022\"]]"
       ],
-      "id": "7db14e41",
+      "id": "7c998719",
       "execution_count": null,
       "outputs": []
     },
@@ -106,7 +106,7 @@
         "\n",
         "We can remove the \"k\" and multiply those values by 1000 with the following code:\n"
       ],
-      "id": "1b421bb9"
+      "id": "d6e1c5e5"
     },
     {
       "cell_type": "code",
@@ -117,7 +117,7 @@
         "    values = emissions[col].str.replace(\"k\", \"\")\n",
         "    emissions[col] = np.where(has_k, values.astype(float) * 1000, values.astype(float))"
       ],
-      "id": "302fabac",
+      "id": "d914d9dc",
       "execution_count": null,
       "outputs": []
     },
@@ -127,7 +127,7 @@
       "source": [
         "And check that it worked:\n"
       ],
-      "id": "7aa85040"
+      "id": "28e8aba0"
     },
     {
       "cell_type": "code",
@@ -135,7 +135,7 @@
       "source": [
         "emissions.query(\"country == 'China'\")[[\"country\",  \"2020\", \"2021\", \"2022\"]]"
       ],
-      "id": "190e4792",
+      "id": "1df015c4",
       "execution_count": null,
       "outputs": []
     },
@@ -146,7 +146,7 @@
         "table_df = emissions.query(\"country == 'China'\")[[\"country\",  \"2020\", \"2021\", \"2022\"]]\n",
         "table_df"
       ],
-      "id": "1a35aa74",
+      "id": "6ef9c953",
       "execution_count": null,
       "outputs": []
     },
@@ -162,7 +162,7 @@
         "2. Calculate an \"Absolute Change\" column as the difference between 2022 and 2000.\n",
         "3. Calculate a \"Relative Change\" column as the absolute change divided by the 2000 emissions, then multiplied by 100.\n"
       ],
-      "id": "eb791322"
+      "id": "d0d5fa38"
     },
     {
       "cell_type": "code",
@@ -182,7 +182,7 @@
         "# Round to 0 decimal places, and add a % sign to the relative change\n",
         "table_df[\"Relative Change\"] = emissions[\"Relative Change\"].round(0).astype(str) + \"%\""
       ],
-      "id": "d39c0b7a",
+      "id": "88e7d417",
       "execution_count": null,
       "outputs": []
     },
@@ -192,7 +192,7 @@
       "source": [
         "Now we can display this as an interactive table with itables:\n"
       ],
-      "id": "6f3074d0"
+      "id": "5ce627b7"
     },
     {
       "cell_type": "code",
@@ -200,7 +200,7 @@
       "source": [
         "show(table_df)"
       ],
-      "id": "9fac5fbd",
+      "id": "a686703e",
       "execution_count": null,
       "outputs": []
     },
@@ -217,7 +217,7 @@
         "3. Choose 5 countries of your choice.\n",
         "4. Create a line chart showing emissions over time for the selected countries with Plotly Express.\n"
       ],
-      "id": "edbe7142"
+      "id": "e7e384dd"
     },
     {
       "cell_type": "code",
@@ -251,7 +251,7 @@
         "fig_chart =px.line(emissions_long, x=\"year\", y=\"emissions\", color=\"country\", title=\"emissions over time\")\n",
         "fig_chart"
       ],
-      "id": "93501060",
+      "id": "70cd9f53",
       "execution_count": null,
       "outputs": []
     },
@@ -270,7 +270,7 @@
         "1. Ensure each country has a 3-letter ISO code. We'll use `country_converter` for that.\n",
         "2. Create a map with `px.choropleth` and use `animation_frame` to show changes over time.\n"
       ],
-      "id": "68daa54c"
+      "id": "1dfee3c2"
     },
     {
       "cell_type": "code",
@@ -292,7 +292,7 @@
         "\n",
         "fig_map.show()"
       ],
-      "id": "66c41c0e",
+      "id": "122e6639",
       "execution_count": null,
       "outputs": []
     },
@@ -308,7 +308,7 @@
         "\n",
         "## Table\n"
       ],
-      "id": "8f65c0d9"
+      "id": "ad7815a2"
     },
     {
       "cell_type": "code",
@@ -316,7 +316,7 @@
       "source": [
         "show(table_df)"
       ],
-      "id": "79b0eaed",
+      "id": "a45c7593",
       "execution_count": null,
       "outputs": []
     },
@@ -326,7 +326,7 @@
       "source": [
         "## Chart\n"
       ],
-      "id": "8c735aa8"
+      "id": "7ee0940a"
     },
     {
       "cell_type": "code",
@@ -334,7 +334,7 @@
       "source": [
         "fig_chart.show()"
       ],
-      "id": "999006c9",
+      "id": "0bbd7e47",
       "execution_count": null,
       "outputs": []
     },
@@ -344,7 +344,7 @@
       "source": [
         "## Map\n"
       ],
-      "id": "acf483a4"
+      "id": "b80e95f2"
     },
     {
       "cell_type": "code",
@@ -352,7 +352,7 @@
       "source": [
         "fig_map.show()"
       ],
-      "id": "c164c316",
+      "id": "3edb516f",
       "execution_count": null,
       "outputs": []
     },
@@ -366,7 +366,7 @@
         "\n",
         "As a final step, you should follow the steps outlined in the prework to deplioy your report to GitHub Pages. You will be asked to share a link to your report in the course portal"
       ],
-      "id": "bf3ddcac"
+      "id": "17bac6ad"
     }
   ],
   "metadata": {
